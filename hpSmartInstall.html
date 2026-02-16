@@ -36,6 +36,9 @@
     </section>
 
 
+   
+
+
 
     <section class="hp-smart-features">
         <div class="hp-smart-features-left">
@@ -95,54 +98,96 @@
         </div>
     </section>
 
-</body>
+
+
+
+
+     <!-- <section class="slider-section">
+        <div class="slider-container">
+            <div class="slider-slide active">
+                <img src="images/slider-1install.jpg" alt="Dummy 1" class="slider-img">
+                <div class="slider-caption">
+                    <h3>First Slide Title</h3>
+                    <p>This is the description for the first dummy image. You can add any text here.</p>
+                </div>
+            </div>
+            <div class="slider-slide">
+                <img src="images/slider-2install.jpg" alt="Dummy 2" class="slider-img">
+                <div class="slider-caption">
+                    <h3>Second Slide Title</h3>
+                    <p>This is the description for the second dummy image. You can add any text here.</p>
+                </div>
+            </div>
+            <button class="slider-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="slider-btn next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+    </section>
+    <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slider-slide');
+    function showSlide(n) {
+        slides.forEach((slide, i) => {
+            slide.classList.toggle('active', i === n);
+        });
+    }
+    function moveSlide(dir) {
+        currentSlide = (currentSlide + dir + slides.length) % slides.length;
+        showSlide(currentSlide);
+    }
+    showSlide(currentSlide);
+    </script> -->
+
+
+
+
 
 <section class="slider-section">
     <div class="slider-container">
-        <div class="slider-slide active">
-            <div class="slider-img-wrapper">
-                <img src="images/dummy1.jpg" alt="Dummy 1" class="slider-img">
-                <div class="slider-caption">This is the first dummy image with some text description.</div>
+        <div class="slider-track">
+
+            <div class="slider-slide">
+                <img src="images/slider-1install.jpg" class="slider-img">
+                <div class="slider-text">
+                    <h3>Easy Printer Setup</h3>
+                    <p>Install and configure your printer in just a few simple steps.</p>
+                </div>
             </div>
-        </div>
-        <div class="slider-slide">
-            <div class="slider-img-wrapper">
-                <img src="images/dummy2.jpg" alt="Dummy 2" class="slider-img">
-                <div class="slider-caption">This is the second dummy image with another text description.</div>
+
+            <div class="slider-slide">
+                <img src="images/slider-2install.jpg" class="slider-img">
+                <div class="slider-text">
+                    <h3>Print From Anywhere</h3>
+                    <p>Access and manage your printer remotely with ease.</p>
+                </div>
             </div>
+
         </div>
-        <button class="slider-btn prev" onclick="moveSlide(-1)">&#10094;</button>
-        <button class="slider-btn next" onclick="moveSlide(1)">&#10095;</button>
     </div>
 </section>
-<script>
-let currentSlide = 0;
-const slides = document.getElementsByClassName('slider-slide');
-let autoSlideInterval;
 
-function showSlide(n) {
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].classList.remove('active');
+
+
+<script>
+const track = document.querySelector('.slider-track');
+const slides = document.querySelectorAll('.slider-slide');
+
+let currentIndex = 0;
+const totalSlides = slides.length;
+
+function moveSlide() {
+    currentIndex++;
+    if (currentIndex >= totalSlides) {
+        currentIndex = 0;
     }
-    slides[n].classList.add('active');
+    track.style.transform = `translateX(-${currentIndex * 100}%)`;
 }
-function moveSlide(dir) {
-    currentSlide += dir;
-    if (currentSlide < 0) currentSlide = slides.length - 1;
-    if (currentSlide >= slides.length) currentSlide = 0;
-    showSlide(currentSlide);
-    resetAutoSlide();
-}
-function autoSlide() {
-    currentSlide++;
-    if (currentSlide >= slides.length) currentSlide = 0;
-    showSlide(currentSlide);
-}
-function resetAutoSlide() {
-    clearInterval(autoSlideInterval);
-    autoSlideInterval = setInterval(autoSlide, 3500);
-}
-showSlide(currentSlide);
-autoSlideInterval = setInterval(autoSlide, 3500);
+
+/* Auto slide every 4 seconds */
+setInterval(moveSlide, 4000);
 </script>
+
+
+
+</body>
+
 </html>
