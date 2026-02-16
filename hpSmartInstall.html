@@ -10,12 +10,12 @@
 
 <body>
 
-    <section class="hp-smart-hero">
+    <section class="hp-smart-hero fade-in card-hover-animate">
 
         <!-- LEFT SIDE -->
         <div class="hp-smart-hero-left">
 
-            <img src="images/printeroffline.svg" alt="HP Logo" class="hp-logo">
+            <img src="images/printeroffline.svg" alt="HP Logo" class="hp-logo card-hover-animate img-shadow">
 
             <h1>HP Smart</h1>
 
@@ -29,18 +29,18 @@
 
         <!-- RIGHT SIDE -->
         <div class="hp-smart-hero-right">
-            <img src="images/hp-smart.webp" alt="HP Smart App" class="hp-smart-app-icon">
+            <img src="images/hp-smart.webp" alt="HP Smart App" class="hp-smart-app-icon card-hover-animate img-shadow">
         </div>
 
 
     </section>
 
 
-   
 
 
 
-    <section class="hp-smart-features">
+
+    <section class="hp-smart-features fade-in delay-1 card-hover-animate">
         <div class="hp-smart-features-left">
             <div class="features-text">
                 <h2>Print, scan, and share files using Smart with your printer. Smart makes it easy to get started and
@@ -65,33 +65,33 @@
             </div>
         </div>
         <div class="hp-smart-features-right">
-            <img src="images/app-home-page.webp" alt="HP Smart App" class="hp-smart-app-icon">
+            <img src="images/app-home-page.webp" alt="HP Smart App" class="hp-smart-app-icon card-hover-animate img-shadow">
         </div>
     </section>
 
 
 
-    <section class="support-solutions">
+    <section class="support-solutions fade-in delay-2 card-hover-animate">
         <h2 class="support-heading">We Provide Solutions for</h2>
         <p class="support-desc">Storage | Software Download | Installation Issues | Network Connectivity Issues</p>
         <div class="support-blocks">
             <div class="support-block">
-                <img src="images/support1.png" alt="Laptop & Desktop Support" class="support-img">
+                <img src="images/support1.png" alt="Laptop & Desktop Support" class="support-img card-hover-animate">
                 <div class="support-content">
                     <h3>Get Instant Support for Laptop & Desktop</h3>
                     <p>If your all-in-one, elite, premium, pavilion, or any other desktop is not working properly due to
                         an error, connect with one of our technicians through chat support.</p><br>
-                    <button class="chat-assist-btn" >Click for Chat
+                    <button class="chat-assist-btn">Click for Chat
                         Assistance</button>
                 </div>
             </div>
             <div class="support-block">
-                <img src="images/support2.png" alt="Driver Download & Installation Support" class="support-img">
+                <img src="images/support2.png" alt="Driver Download & Installation Support" class="support-img card-hover-animate">
                 <div class="support-content">
                     <h3>Driver Download & Installation Support</h3>
                     <p>Finding and installing the right drivers can take time. Our support services make it simple and
                         stress-free.</p> <br>
-                    <button class="chat-assist-btn" >Click for Chat
+                    <button class="chat-assist-btn">Click for Chat
                         Assistance</button>
                 </div>
             </div>
@@ -99,92 +99,53 @@
     </section>
 
 
-
-
-
-     <!-- <section class="slider-section">
-        <div class="slider-container">
-            <div class="slider-slide active">
-                <img src="images/slider-1install.jpg" alt="Dummy 1" class="slider-img">
-                <div class="slider-caption">
-                    <h3>First Slide Title</h3>
-                    <p>This is the description for the first dummy image. You can add any text here.</p>
+    <section class="slider-section fade-in delay-3 ">
+        <div class="slider-container ">
+            <div class="slider-track">
+                <div class="slider-slide ">
+                    <img src="images/slider-1install.jpg" class="slider-img card-hover-animate img-shadow">
+                </div>
+                <div class="slider-slide ">
+                    <img src="images/slider-2install.jpg" class="slider-img card-hover-animate img-shadow">
+                </div>
+                <!-- 🔥 CLONE OF FIRST SLIDE -->
+                <div class="slider-slide ">
+                    <img src="images/slider-1install.jpg" class="slider-img card-hover-animate img-shadow">
                 </div>
             </div>
-            <div class="slider-slide">
-                <img src="images/slider-2install.jpg" alt="Dummy 2" class="slider-img">
-                <div class="slider-caption">
-                    <h3>Second Slide Title</h3>
-                    <p>This is the description for the second dummy image. You can add any text here.</p>
-                </div>
-            </div>
-            <button class="slider-btn prev" onclick="moveSlide(-1)">&#10094;</button>
-            <button class="slider-btn next" onclick="moveSlide(1)">&#10095;</button>
         </div>
     </section>
+
+
+
+
     <script>
-    let currentSlide = 0;
-    const slides = document.querySelectorAll('.slider-slide');
-    function showSlide(n) {
-        slides.forEach((slide, i) => {
-            slide.classList.toggle('active', i === n);
-        });
-    }
-    function moveSlide(dir) {
-        currentSlide = (currentSlide + dir + slides.length) % slides.length;
-        showSlide(currentSlide);
-    }
-    showSlide(currentSlide);
-    </script> -->
+        const track = document.querySelector('.slider-track');
+        const slides = document.querySelectorAll('.slider-slide');
+
+        let currentIndex = 0;
+        const totalSlides = slides.length;
+
+        function moveSlide() {
+            currentIndex++;
+
+            track.style.transition = "transform 0.8s ease-in-out";
+            track.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+            // When reaching cloned slide
+            if (currentIndex === totalSlides - 1) {
+                setTimeout(() => {
+                    track.style.transition = "none";
+                    currentIndex = 0;
+                    track.style.transform = `translateX(0%)`;
+                }, 800);
+            }
+        }
+
+        setInterval(moveSlide, 4000);
+    </script>
 
 
-
-
-
-<section class="slider-section">
-    <div class="slider-container">
-        <div class="slider-track">
-
-            <div class="slider-slide">
-                <img src="images/slider-1install.jpg" class="slider-img">
-                <div class="slider-text">
-                    <h3>Easy Printer Setup</h3>
-                    <p>Install and configure your printer in just a few simple steps.</p>
-                </div>
-            </div>
-
-            <div class="slider-slide">
-                <img src="images/slider-2install.jpg" class="slider-img">
-                <div class="slider-text">
-                    <h3>Print From Anywhere</h3>
-                    <p>Access and manage your printer remotely with ease.</p>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-
-
-<script>
-const track = document.querySelector('.slider-track');
-const slides = document.querySelectorAll('.slider-slide');
-
-let currentIndex = 0;
-const totalSlides = slides.length;
-
-function moveSlide() {
-    currentIndex++;
-    if (currentIndex >= totalSlides) {
-        currentIndex = 0;
-    }
-    track.style.transform = `translateX(-${currentIndex * 100}%)`;
-}
-
-/* Auto slide every 4 seconds */
-setInterval(moveSlide, 4000);
-</script>
 
 
 
