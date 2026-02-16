@@ -369,6 +369,13 @@ footer {
     transition: background 0.2s;
     box-shadow: none;
 }
+.fav-icon img.custom-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+
 .carousel-arrow.left {
     margin-right: 8px;
 }
@@ -488,12 +495,40 @@ a{
     cursor: pointer;
     font-size: 18px;
     color: #fff;
+    border: 1px solid #555454;
 }
 .fav-icon.blue-bg {
-    background: #0073e6;
+    background: #ffffff;
 }
 .fav-icon:hover {
-    box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+    box-shadow: 0 4px 12px rgba(30, 78, 236, 0.18);
+}
+
+
+.device-item {
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 6px;
+    transition: 0.3s ease;
+}
+
+.device-item.active {
+    background-color: #2563eb; /* blue */
+    color: #fff;
+}
+
+/* If using image icons */
+.device-item.active img {
+    filter: brightness(0) invert(1); /* makes image white */
+}
+
+
+/* Mobile View */
+@media (max-width: 600px) {
+    .fav-icon{
+        width: 40px;
+        height: 35px;
+    }
 }
 
 .container {
@@ -662,10 +697,7 @@ a{
     padding-left: 2px;
 }
 
-.blue-bg {
-    background: #eef6ff;
-    border-left: 5px solid #003d7a;
-}
+
  
 
 .printer-setup-guide-text{
