@@ -98,7 +98,7 @@
 }
 /* Modern Footer Styles */
 footer {
-    background: #fff !important;
+    background: #fcf9f9 !important;
     color: #111 !important;
     padding: 48px 0 0 0;
     font-size: 1.01rem;
@@ -107,19 +107,22 @@ footer {
 .footer-main {
     display: flex;
     flex-wrap: wrap;
-    gap: 54px 48px;
+    gap: 28px; /* reduced gap */
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 32px 48px 32px;
+    padding: 0 20px 40px 20px; /* reduced side padding */
     justify-content: space-between;
 }
+
+
 .footer-col {
-    flex: 1 1 210px;
-    min-width: 210px;
-    max-width: 320px;
-    margin-bottom: 32px;
-    padding-right: 18px;
+    flex: 1 1 220px;
+    min-width: 200px;
+    max-width: 100%;
+    margin-bottom: 20px;
+    padding-right: 0; /* removed extra spacing */
 }
+
 .logo-col {
     flex: 1 1 260px;
     max-width: 320px;
@@ -176,6 +179,29 @@ footer {
     margin-bottom: 14px;
     line-height: 1.6;
 }
+
+/* Tablet */
+@media (max-width: 992px) {
+    .footer-col {
+        flex: 1 1 45%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .footer-main {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-col {
+        flex: 1 1 100%;
+        min-width: 100%;
+    }
+}
+
+
+
 /* Advanced Troubleshooting Guide Styling */
 .advanced-troubleshooting {
     display: flex;
