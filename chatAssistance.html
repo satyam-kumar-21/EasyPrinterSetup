@@ -1,60 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <title>Printer Setup Help</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="chatAssistence.css">
 </head>
 
 <body>
-    <div class="chat-assist-hero">
+
+    <!-- HERO SECTION -->
+    <section class="chat-assist-hero">
         <div class="chat-assist-text">
             <h2>We're here to help you set up your printer</h2>
-            <p>Let's connect your printer to a Wi-Fi or wired network or to a computer using a USB cable. First, tell us
-                your printer model.</p> <br><br>
+            <p>
+                Let's connect your printer to a Wi-Fi or wired network or to a computer using a USB cable.
+                First, tell us your printer model.
+            </p>
         </div>
+
         <div class="chat-assist-img">
-            <img src="images/Printer_Setup_Landing.jpg" alt="Printer Setup Help" />
+            <img src="images/Printer_Setup_Landing.jpg" alt="Printer Setup Help">
         </div>
-    </div>
+    </section>
 
-    <!-- Bottom Info Section -->
-
-    </div>
-
-    <div class="chat-assist-action">
+    <!-- ACTION SECTION -->
+    <section class="chat-assist-action">
         <div class="chat-assist-action-left">
 
             <form class="printer-action-form">
+
+                <!-- RADIO GROUP -->
                 <div class="radio-group">
-                    <label><input type="radio" name="printer-action" value="setup" checked> Unpack, Setup New
-                        Printer</label>
-                    <label><input type="radio" name="printer-action" value="troubleshoot"> Troubleshoot Printer
-                        Issues</label>
+                    <label>
+                        <input type="radio" name="printer-action" value="setup" required>
+                        Unpack, Setup New Printer
+                    </label>
+
+                    <label>
+                        <input type="radio" name="printer-action" value="troubleshoot">
+                        Troubleshoot Printer Issues
+                    </label>
                 </div>
+
+                <!-- INPUT -->
                 <div class="input-group">
-                    <label for="printer-id">Enter your serial number, product number or product name</label>
-                    <input type="text" id="printer-id" name="printer-id"
-                        placeholder="e.g. HP1234, 5CD12345AB, DeskJet 2700" required>
+                    <label for="printer-id">
+                        Enter your serial number, product number or product name
+                    </label>
+                    <input 
+                        type="text" 
+                        id="printer-id"
+                        name="printer-id"
+                        placeholder="e.g. HP1234, DeskJet 2700"
+                        required
+                    >
                 </div>
+
+                <!-- BUTTON -->
                 <button type="submit" class="search-btn">Search</button>
+
             </form>
+
         </div>
+
         <div class="chat-assist-action-img">
-            <img src="images/printer-1.jpg" alt="Printer Action" />
+            <img src="images/printer-1.jpg" alt="Printer Action">
         </div>
-    </div>
+    </section>
 
-
-    <div class="chat-assist-bottom">
+    <!-- BOTTOM SECTION -->
+    <section class="chat-assist-bottom">
         <div class="chat-assist-bottom-left">
-            <p>We’ve made it easy to download printer software. Enter your product name and we’ll get you the right
-                drivers and setup tools for Windows, MacOS, iOS, and Android.</p>
+            <p>
+                We’ve made it easy to download printer software. Enter your product name and we’ll get you
+                the right drivers and setup tools for Windows, MacOS, iOS, and Android.
+            </p>
         </div>
-        <div class="chat-assist-bottom-right"></div>
-    </div>
-</body>
+    </section>
 
+    <!-- JAVASCRIPT -->
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+        const form = document.querySelector(".printer-action-form");
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault(); // Stop page reload
+
+            const selectedOption = document.querySelector('input[name="printer-action"]:checked');
+            const printerId = document.getElementById("printer-id").value.trim();
+
+            if (!selectedOption || printerId === "") {
+                alert("Please select an option and enter printer details.");
+                return;
+            }
+
+            // Create structured data object (future backend ready)
+            const formData = {
+                actionType: selectedOption.value,
+                printerModel: printerId,
+                timestamp: new Date().toISOString()
+            };
+
+            // Console Output
+            console.log("Form Submitted Successfully ✅");
+            console.log(formData);
+
+            /*
+            🔥 When you are ready to redirect, just uncomment:
+
+            window.location.href = "hpSmartInstall.html";
+            */
+
+            window.location.href = "hpSmartInstall.html";
+        });
+
+    });
+    </script>
+
+</body>
 </html>

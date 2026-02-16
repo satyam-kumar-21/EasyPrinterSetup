@@ -1,0 +1,461 @@
+/* ============================= */
+/* SLIDER SECTION */
+/* ============================= */
+    width: 100vw;
+    background: #fafdff;
+    padding: 40px 0 60px 0;
+    display: flex;
+    justify-content: center;
+        width: 100%;
+        background: #fafdff;
+        padding: 40px 0 60px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    background: #fff;
+        position: relative;
+        width: 90vw;
+        max-width: 600px;
+        min-height: 320px;
+        background: #fff;
+        border-radius: 18px;
+        box-shadow: 0 4px 18px rgba(0, 115, 230, 0.10), 0 1.5px 6px rgba(0,0,0,0.06);
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    width: 100%;
+        position: relative;
+        width: 700px;
+        height: 380px;
+        max-width: 90vw;
+        max-height: 60vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    width: 1100px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: #1976d2;
+        color: #fff;
+        border: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+        cursor: pointer;
+        box-shadow: 0 2px 8px rgba(25, 118, 210, 0.10);
+        transition: background 0.2s;
+        z-index: 2;
+        opacity: 0.85;
+    position: absolute;
+        background: #0056b3;
+    bottom: 0;
+    background: rgba(25, 118, 210, 0.75);
+    color: #fff;
+    font-size: 1.35rem;
+    font-weight: 600;
+    padding: 24px 18px 18px 18px;
+    border-radius: 0 0 16px 16px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    letter-spacing: 0.5px;
+}
+.slider-caption {
+    font-size: 1.08rem;
+    color: #1976d2;
+    margin-top: 8px;
+    font-weight: 500;
+}
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    color: #1976d2;
+    border: none;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    font-size: 2.5rem;
+    cursor: pointer;
+    box-shadow: none;
+    transition: color 0.2s;
+    z-index: 2;
+    opacity: 0.85;
+}
+.slider-btn.prev {
+    left: 16px;
+}
+.slider-btn.next {
+    right: 16px;
+}
+    color: #0056b3;
+}
+@media (max-width: 900px) {
+    .slider-container {
+        min-height: 220px;
+        max-width: 99vw;
+    }
+    .slider-img-wrapper {
+        width: 98vw;
+        height: 180px;
+        max-width: 99vw;
+        max-height: 220px;
+    }
+    .slider-caption {
+        font-size: 1rem;
+        padding: 12px 8px 8px 8px;
+    }
+}
+.support-desc {
+    font-size: 1rem;
+    color: #1976d2;
+    text-align: center;
+    margin-bottom: 28px;
+    font-weight: 400;
+    opacity: 0.85;
+}
+
+/* ============================= */
+/* SUPPORT SOLUTIONS SECTION */
+/* ============================= */
+.support-solutions {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 36px 24px;
+    background: #fafdff;
+    border-radius: 16px;
+    box-shadow: 0 4px 18px rgba(0, 115, 230, 0.08),
+        0 1.5px 6px rgba(0, 0, 0, 0.06);
+}
+
+.support-heading {
+    font-size: 2rem;
+    color: #050505;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 32px;
+    line-height: 1.4;
+}
+
+.support-blocks {
+    display: flex;
+    gap: 36px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.support-block {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(25, 118, 210, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 18px;
+    max-width: 520px;
+    flex: 1 1 320px;
+    gap: 18px;
+    margin-bottom: 18px;
+    transition: box-shadow 0.3s;
+}
+
+.support-block:hover {
+    box-shadow: 0 6px 24px rgba(25, 118, 210, 0.13);
+}
+
+.support-img {
+    width: 340px;
+    height: 120px;
+    object-fit: contain;
+    margin: 0 0 18px 0;
+    display: block;
+}
+
+.support-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.support-content h3 {
+    font-size: 1.18rem;
+    color: #1976d2;
+    margin-bottom: 8px;
+    font-weight: 600;
+    text-align: center;
+}
+
+
+.support-content p {
+    font-size: 1rem;
+    color: #222;
+    margin-bottom: 14px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.chat-assist-btn {
+    background: #1976d2;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 16px 36px;
+    font-size: 1.18rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
+    transition: background 0.2s, box-shadow 0.2s;
+    display: block;
+    margin: 0 auto;
+}
+
+.chat-assist-btn:hover {
+    background: #0056b3;
+    box-shadow: 0 4px 16px rgba(25, 118, 210, 0.13);
+}
+
+@media (max-width: 900px) {
+    .support-blocks {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .support-block {
+        max-width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 18px 12px;
+    }
+
+    .support-img {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+/* ============================= */
+/* HP SMART FEATURES SECTION */
+/* ============================= */
+
+.hp-smart-features {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 40px;
+    gap: 50px;
+    background: #fafdff;
+    border-radius: 16px;
+    box-shadow: 0 4px 18px rgba(0, 115, 230, 0.08),
+        0 1.5px 6px rgba(0, 0, 0, 0.06);
+    min-height: 400px;
+}
+
+/* LEFT SIDE */
+.hp-smart-features-left {
+    flex: 0 0 65%;
+}
+
+.features-text h2 {
+    font-size: 1.6rem;
+    color: #1976d2;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* NOTE TEXT */
+.features-note {
+    font-size: 0.95rem;
+    color: #0056b3;
+    margin: 15px 0;
+    font-weight: 500;
+}
+
+/* LIST */
+.features-text ul {
+    margin-top: 15px;
+    padding-left: 20px;
+    line-height: 1.7;
+}
+
+.list-item {
+    font-size: 0.95rem;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+/* RIGHT SIDE */
+.hp-smart-features-right {
+    flex: 0 0 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    height: 100%;
+    position: relative;
+}
+
+/* IMAGE */
+.hp-smart-features-right .hp-smart-app-icon {
+    width: auto;
+    height: 100% !important;
+    max-height: 100% !important;
+    max-width: 340px;
+    min-width: 120px;
+    border-radius: 14px;
+    box-shadow: 0 20px 45px rgba(25, 118, 210, 0.18);
+    transition: transform 0.3s ease;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+.hp-smart-features-right .hp-smart-app-icon:hover {
+    transform: translateY(-6px);
+}
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
+@media (max-width: 900px) {
+    .hp-smart-features {
+        flex-direction: column-reverse;
+        padding: 30px 20px;
+        gap: 25px;
+        text-align: center;
+    }
+
+    .hp-smart-features-left,
+    .hp-smart-features-right {
+        flex: unset;
+        width: 100%;
+    }
+
+    .features-text ul {
+        padding-left: 0;
+        list-style-position: inside;
+    }
+
+    .hp-smart-features-right .hp-smart-app-icon {
+        max-width: 200px;
+    }
+}
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f8fc;
+}
+
+/* MAIN SECTION */
+.hp-smart-hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 80px auto 40px auto;
+    padding: 5px;
+    gap: 40px;
+}
+
+/* LEFT SIDE (40%) */
+.hp-smart-hero-left {
+    flex: 0 0 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* vertical center */
+    align-items: center;
+    /* horizontal center */
+    text-align: center;
+    padding: 0 70px;
+}
+
+/* Logo */
+.hp-logo {
+    width: 70px;
+    margin-bottom: 20px;
+}
+
+/* Title */
+.hp-smart-hero-left h1 {
+    font-size: 2.8rem;
+    color: #1976d2;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+/* Full Width Button */
+.install-btn {
+    width: 100%;
+    padding: 14px 0;
+    background: #1976d2;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.install-btn:hover {
+    background: #125ea9;
+}
+
+/* Description (after button) */
+.description {
+    font-size: 1.1rem;
+    color: #444;
+}
+
+/* RIGHT SIDE (60%) */
+.hp-smart-hero-right {
+    flex: 0 0 60%;
+    display: flex;
+    justify-content: center;
+}
+
+/* IMAGE WITH PROFESSIONAL SHADOW */
+.hp-smart-app-icon {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .hp-smart-hero {
+        flex-direction: column;
+        margin-top: 40px;
+    }
+
+    .hp-smart-hero-left,
+    .hp-smart-hero-right {
+        width: 100%;
+    }
+
+    .hp-smart-hero-right {
+        margin-top: 30px;
+    }
+}
